@@ -25,7 +25,7 @@
 
 <body>
 
-<form class="form-signin" method="post">
+<form class="form-signin" method="post" enctype="multipart/form-data">
     <div class="form-label-group">
         <input type="text" name="theme" class="form-control" placeholder="Enter your Theme">
     </div>
@@ -33,16 +33,23 @@
         <input type="text" name="weight" class="form-control" placeholder="Gross weight">
     </div>
     <div class="form-label-group">
-        <input type="email" name="volume" class="form-control" placeholder="Cargo volume">
+        <input type="text" name="volume" class="form-control" placeholder="Cargo volume">
     </div>
-    <form1 id="upload-container" method="POST" action="send.php">
+    <div class="form-file">
+        <input type="file" name="file" class="form-file-input" id="customFile">
+        <label class="form-file-label" for="customFile">
+            <span class="form-file-text">Choose file...</span>
+            <span class="form-file-button">Browse</span>
+        </label>
+    </div>
+    <!--<div id="upload-container" method="POST" action="send.php">
         <img id="upload-image" src="https://habrastorage.org/webt/dr/qg/cs/drqgcsoh1mosho2swyk3kk_mtwi.png">
         <div>
             <input id="file-input" type="file" name="file" multiple>
             <label for="file-input">Выберите файл</label>
             <span>или перетащите его сюда</span>
         </div>
-    </form1>
+    </div>-->
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Calculate freight without transportation from
         shipper
